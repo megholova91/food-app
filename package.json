@@ -1,0 +1,32 @@
+{
+  "name": "food-app",
+  "version": "1.0.0",
+  "description": "Food delivery app mock",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest",
+    "watch-test": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/megholova91/food-app.git"
+  },
+  "author": "Megholova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/megholova91/food-app/issues"
+  },
+  "homepage": "https://github.com/megholova91/food-app#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "browserslist": [
+    "last 5 versions"
+  ]
+}
