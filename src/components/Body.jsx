@@ -1,9 +1,10 @@
 import RestaurantCard from "./RestaurantCard";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
-import { SWIGGY_API } from "../utils/constants";
+import { CORS_PROXY, SWIGGY_API } from "../utils/constants";
 import Search from "./Search";
 import useOnlineStatus from "../hooks/useOnlineStatus";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
@@ -42,8 +43,7 @@ const Body = () => {
   }, []);
 
   const fetchData = async () => {
-    const url = "https://thingproxy.freeboard.io/fetch/" + SWIGGY_API;
-    const data = await fetch(url);
+    const data = await fetch(CORS_PROXY + SWIGGY_API);
     const jsonData = await data.json();
     const restaurantList =
       jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
@@ -76,7 +76,9 @@ const Body = () => {
           <Shimmer />
         ) : (
           filteredRestaurants.map((resData) => (
-            <RestaurantCard resData={resData} />
+            <Link to={`/restaurant/${resData.info.id}`} key={resData.info.id}>
+              <RestaurantCard resData={resData} />
+            </Link>
           ))
         )}
       </div>
