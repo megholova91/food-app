@@ -11,7 +11,8 @@ const Body = () => {
   }, []);
 
   const fetchData = async () => {
-    const data = await fetch("https://crossproxy.io/?" + SWIGGY_API);
+    const url = "https://thingproxy.freeboard.io/fetch/" + SWIGGY_API;
+    const data = await fetch(url);
     const jsonData = await data.json();
     const restaurantList =
       jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
