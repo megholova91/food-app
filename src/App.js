@@ -1,7 +1,8 @@
 import { createRoot } from "react-dom/client";
+import Header from "./components/Header";
 
 const App = () => {
-  return <h1>BFF - Food App</h1>;
+  return <Header />;
 };
 
 const root = createRoot(document.getElementById("root"));
