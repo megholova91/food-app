@@ -3,11 +3,14 @@ import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { SWIGGY_API } from "../utils/constants";
 import Search from "./Search";
+import useOnlineStatus from "../hooks/useOnlineStatus";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
+
+  const isOnline = useOnlineStatus();
 
   //filter restaurants with 4+ rating
   const filterTopRatedRestaurants = () => {
@@ -48,6 +51,8 @@ const Body = () => {
     setListOfRestaurants(restaurantList);
     setFilteredRestaurants(restaurantList);
   };
+
+  if (!isOnline) return <h1>Looks like you are offline!</h1>;
 
   return (
     <div className="py-5 m-3">
