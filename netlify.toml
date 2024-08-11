@@ -1,5 +1,5 @@
 [[redirects]]
   force = true
-  from = "*"
+  from = "https://www.swiggy.com"
   status = 200
   to = "https://thingproxy.freeboard.io/fetch/"
