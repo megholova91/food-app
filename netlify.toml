@@ -1,5 +1,5 @@
 [[redirects]]
   force = true
-  from = "/"
+  from = "*"
   status = 200
   to = "https://thingproxy.freeboard.io/fetch/"
