@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../hooks/useOnlineStatus";
+import Login from "./Login";
 
 const Nav = () => {
   const isOnline = useOnlineStatus();
+
   return (
     <div className="text-lg">
       <ul className="flex p-4">
@@ -16,7 +18,7 @@ const Nav = () => {
         <li className="p-3 m-3">
           <Link to="/contact">Contact Us</Link>
         </li>
-        <li className="p-3 m-3">Login</li>
+        <Login />
         <li className="p-3 m-3">Cart</li>
       </ul>
     </div>
