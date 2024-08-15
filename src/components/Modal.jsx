@@ -1,5 +1,6 @@
 import { createPortal } from "react-dom";
 import { twMerge } from "tailwind-merge";
+import Close from "../assets/close";
 
 const portalElement = document.getElementById("portal");
 
@@ -16,8 +17,11 @@ const Modal = ({ open, children, onClose, className }) => {
         )}
       >
         {children}
-        <button onClick={onClose} className="absolute right-8 top-8">
-          Close
+        <button
+          onClick={onClose}
+          className="absolute right-8 top-8 fill-slate-700"
+        >
+          <Close height={30} width={30} />
         </button>
       </div>
     </>,
