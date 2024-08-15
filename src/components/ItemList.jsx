@@ -11,7 +11,7 @@ const ItemList = ({ items }) => {
           <div
             data-testid="menu-item"
             key={id}
-            className={`flex gap-4 px-2 py-4 border-gray-200 ${borderBottom}`}
+            className={`flex gap-4 px-2 py-6 border-gray-200 ${borderBottom}`}
           >
             <div className="w-9/12">
               <div className="flex py-2 gap-2">
@@ -21,9 +21,9 @@ const ItemList = ({ items }) => {
               <p className="text-left text-xs text-gray-700">{description}</p>
             </div>
             <div className="w-3/12 relative">
-              <div className="absolute -bottom-2 right-8">
+              <div className="absolute -bottom-4 right-1/2 translate-x-1/2">
                 <button
-                  className="py-2 px-6 bg-white rounded-lg text-green-700 shadow-lg"
+                  className="py-2 px-8 bg-white rounded-lg text-green-700 shadow-lg font-bold"
                   onClick={() => handleAddItem(item)}
                 >
                   ADD
