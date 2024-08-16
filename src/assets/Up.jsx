@@ -6,7 +6,7 @@ export default Up = ({ height, width }) => {
       width={width ?? "200px"}
       viewBox="0 0 330 330"
     >
-      <g stroke-width="0"></g>
+      <g strokeWidth="0"></g>
       <g strokeLinecap="round" strokeLinejoin="round"></g>
       <g>
         {" "}

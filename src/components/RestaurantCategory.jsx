@@ -1,8 +1,7 @@
 import { Down, Up } from "../assets";
 import ItemList from "./ItemList";
 
-const RestaurantCategory = (props) => {
-  const { data, showItems, toggleCategory } = props;
+const RestaurantCategory = ({ data, showItems, toggleCategory }) => {
   const { title, itemCards } = data;
   return (
     <div className="shadow-lg p-4 w-2/3 mx-auto bg-gray-50 my-4">

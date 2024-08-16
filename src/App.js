@@ -7,14 +7,18 @@ import Contact from "./components/Contact";
 import RestaurantMenu from "./components/RestaurantMenu";
 import Error from "./components/Error";
 import UserContextProvider from "./utils/UserContextProvider";
+import Cart from "./components/Cart";
+import { CartContextProvider } from "./hooks/useCartContextProvider";
 
 const App = () => {
   return (
     <UserContextProvider>
-      <div>
-        <Header />
-        <Outlet />
-      </div>
+      <CartContextProvider>
+        <div>
+          <Header />
+          <Outlet />
+        </div>
+      </CartContextProvider>
     </UserContextProvider>
   );
 };
@@ -39,6 +43,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/restaurant/:resId",
         element: <RestaurantMenu />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
       },
     ],
     errorElement: <Error />,
