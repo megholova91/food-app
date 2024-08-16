@@ -10,7 +10,7 @@
 - ✅ Search for restaurants with keyword
 - ✅ Filter top rated restaurants
 - ✅ On clicking of restaurant, show restaurant menu
-- Add items from restaurant menu
-- Cart page
-- About Us Page
+- ✅ Add items from restaurant menu
+- ✅ Cart page
+- ✅ About Us Page
 - Contact Us Page
