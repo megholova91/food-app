@@ -53,7 +53,15 @@ const Body = () => {
   };
 
   const fetchData = async () => {
-    const data = await fetch(CORS_PROXY + SWIGGY_API);
+    const data = await fetch(CORS_PROXY, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        url: SWIGGY_API,
+      }),
+    });
     const jsonData = await data.json();
     const restaurantList =
       jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
