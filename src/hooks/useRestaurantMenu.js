@@ -11,7 +11,16 @@ const useRestaurantMenu = () => {
   }, []);
 
   const fetchMenu = async () => {
-    const data = await fetch(CORS_PROXY + SWIGGY_MENU_API + resId);
+    const data = await fetch(CORS_PROXY, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        url: SWIGGY_MENU_API + resId,
+      }),
+    });
+
     const json = await data.json();
     setRestaurantInfo(json.data);
   };
