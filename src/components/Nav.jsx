@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../hooks/useOnlineStatus";
 import Login from "./Login";
-import Cart from "./Cart";
 import { CartIcon } from "../assets";
 import useCartContext from "../hooks/useCartContextProvider";
 import { useMemo } from "react";
