@@ -1,4 +1,4 @@
-export default Up = ({ height, width }) => {
+const Up = ({ height, width }) => {
   return (
     <svg
       fill="#000000"
@@ -15,3 +15,5 @@ export default Up = ({ height, width }) => {
     </svg>
   );
 };
+
+export default Up;

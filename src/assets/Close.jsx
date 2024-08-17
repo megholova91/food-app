@@ -1,4 +1,4 @@
-export default Close = ({ height, width }) => {
+const Close = ({ height, width }) => {
   return (
     <svg
       x="0px"
@@ -11,3 +11,5 @@ export default Close = ({ height, width }) => {
     </svg>
   );
 };
+
+export default Close;

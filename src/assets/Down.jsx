@@ -1,4 +1,4 @@
-export default Down = ({ height, width }) => {
+const Down = ({ height, width }) => {
   return (
     <svg
       fill="#000000"
@@ -15,3 +15,5 @@ export default Down = ({ height, width }) => {
     </svg>
   );
 };
+
+export default Down;
