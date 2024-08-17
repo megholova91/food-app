@@ -1,5 +1,5 @@
 import { Search as SearchImg } from "../assets";
-import Close from "../assets";
+import { Close } from "../assets";
 
 const Search = ({
   searchQuery,

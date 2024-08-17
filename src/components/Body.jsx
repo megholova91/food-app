@@ -5,7 +5,7 @@ import { CORS_PROXY, SWIGGY_API } from "../utils/constants";
 import Search from "./Search";
 import useOnlineStatus from "../hooks/useOnlineStatus";
 import { Link } from "react-router-dom";
-import Close from "../assets";
+import { Close } from "../assets";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);

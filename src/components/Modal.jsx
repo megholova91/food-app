@@ -1,6 +1,6 @@
 import { createPortal } from "react-dom";
 import { twMerge } from "tailwind-merge";
-import Close from "../assets";
+import { Close } from "../assets";
 
 const portalElement = document.getElementById("portal");
 
