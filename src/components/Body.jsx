@@ -18,7 +18,7 @@ const Body = () => {
   //filter restaurants with 4+ rating
   const filterTopRatedRestaurants = () => {
     const filteredListOfRestaurants = listOfRestaurants.filter(
-      (res) => res.info.avgRating >= 4.5
+      (res) => res.info.avgRating >= 4.5,
     );
     setFilteredRestaurants(filteredListOfRestaurants);
     setShowTopRatedRestaurants(true);
@@ -41,7 +41,7 @@ const Body = () => {
       setFilteredRestaurants(listOfRestaurants);
     } else {
       const filteredListOfRestaurants = listOfRestaurants.filter((res) =>
-        res.info.name.toLowerCase().includes(query)
+        res.info.name.toLowerCase().includes(query),
       );
       setFilteredRestaurants(filteredListOfRestaurants);
     }
@@ -53,15 +53,7 @@ const Body = () => {
   };
 
   const fetchData = async () => {
-    const data = await fetch(CORS_PROXY, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        url: SWIGGY_API,
-      }),
-    });
+    const data = await fetch(CORS_PROXY + SWIGGY_API);
     const jsonData = await data.json();
     const restaurantList =
       jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
